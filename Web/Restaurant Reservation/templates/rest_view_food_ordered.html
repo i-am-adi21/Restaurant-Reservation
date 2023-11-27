@@ -1,0 +1,28 @@
+{% include "rest_header.html" %}
+<center>
+	<h1>Food Ordered</h1>
+	<table class="table" style="width: 500px">
+
+		<tr>
+			<th>Sl No</th>
+			<th>Item Name</th>
+			<th>Image</th>
+			<th>Quantity</th>
+			
+			
+		</tr>
+		{% for row in data['order'] %}
+
+		<tr>
+			<td>{{loop.index}}</td>
+			<td>{{row['item_name']}}</td>
+			<td><img src="/{{row['item_image']}}" height="70px" width="70px"></td>
+
+			<td>{{row['quantity']}}</td>
+			
+			
+		</tr>
+		{% endfor %}
+	</table>
+</center>
+{% include "footer.html"%}

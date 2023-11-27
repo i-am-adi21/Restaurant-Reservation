@@ -1,0 +1,83 @@
+{% include "rest_header.html" %}
+<center>
+	<form method="post" enctype="multipart/form-data">
+		{% if data['updatess'] %}
+		<h1>Update Facilities</h1>
+		<table class="table" style="width: 500px">
+			<tr>
+				<th>Facility Name</th>
+				<td><input type="text" name="fname" value="{{data['updatess'][0]['facility_name']}}" pattern="[a-zA-Z/s]{0,30}" required></td>
+		
+			</tr>
+			<tr>
+				<th>Facility Description</th>
+				<td><input type="text" name="desc" value="{{data['updatess'][0]['facility_description']}}" pattern="[a-zA-Z/s]{0,50}" required></td>
+				
+			</tr>
+			<tr>
+				<th>Image</th>
+				<td><input type="file" name="image"  required></td>
+				
+			</tr>
+			
+			<tr>
+				
+				<td colspan="2" align="center"><input type="submit" name="submits" value="submit"></td>
+				
+			</tr>
+		</table>
+
+		{% else %}
+
+		<h1>Manage Facilities</h1>
+		<table class="table" style="width: 500px">
+			<tr>
+				<th>Facility Name</th>
+				<td><input type="text" name="fname" pattern="[a-zA-Z/s]{0,30}" required></td>
+				
+			</tr>
+			<tr>
+				<th>Facility Description</th>
+				<td><input type="text" name="desc" pattern="[a-zA-Z/s]{0,50}" required></td>
+				
+			</tr>
+			<tr>
+				<th>Image</th>
+				<td><input type="file" name="image"  required></td>
+				
+			</tr>
+			
+			<tr>
+				
+				<td colspan="2" align="center"><input type="submit" name="submit" value="submit"></td>
+				
+			</tr>
+		</table>
+		{% endif %}
+		<h1>Hotel Facilities</h1>
+
+		<table class="table" style="width: 500px">
+			<tr>
+				<th>Sl No</th>
+				<th>Facility Name</th>
+				<th>Facility Description</th>
+				<th>Image</th>
+				
+			</tr>
+			{% for row in data['facility'] %}
+			<tr>
+				<td>{{loop.index}}</td>
+				<td>{{row['facility_name']}}</td>
+				<td>{{row['facility_description']}}</td>
+				<td><img src="/{{row['image']}}" height="100" width="100"></td>
+				<td><a style="color: orange;" href="?action=update&fid={{row['facility_id']}}">Update</a></td>
+				<td><a style="color: orange;" href="?action=delete&fid={{row['facility_id']}}">delete</a></td>
+
+
+			</tr>
+			{% endfor %}
+		</table>
+		
+	</form>
+</center>
+{% include "footer.html" %}

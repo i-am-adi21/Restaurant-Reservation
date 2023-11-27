@@ -1,0 +1,26 @@
+{% include "rest_header.html" %}
+<center>
+	<h1>Payment</h1>
+	<table class="table" style="width: 500px">
+
+		<tr>
+			<th>Sl No</th>
+			<th>Amount Paid</th>
+			<th>Payment Date</th>
+		</tr>
+
+		{% for row in data['payment'] %}
+
+		<tr>
+			<td>{{loop.index}}</td>
+			<td>{{row['amount_paid']}}</td>
+			<td>{{row['payment_date']}}</td>
+			{% if row['reservation_status']=='pending' %}
+			<td><a style="color: orange;" href="?action=confirm&rid={{row['reservation_id']}}&res_id={{data['res_id']}}">confirm payment</a></td>
+			{% endif %}
+
+		</tr>
+		{% endfor %}
+	</table>
+</center>
+{% include "footer.html"%}

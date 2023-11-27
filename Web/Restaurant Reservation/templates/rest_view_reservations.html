@@ -1,0 +1,28 @@
+{% include "rest_header.html" %}
+<center>
+	<h1>Reservations</h1>
+	<table class="table" style="width: 500px">
+		<tr>
+			<th>Sl No</th>
+			<th>Table</th>
+			<th>Customer Name</th>
+			<th>reservation date-time</th>
+			<th>reservation status</th>
+		</tr>
+		{% for row in data['reservation'] %}
+
+		<tr>
+			<td>{{loop.index}}</td>
+			<td>{{row['table_name']}}</td>
+			<td>{{row['name']}}</td>
+			<td>{{row['reservation_date_time']}}</td>
+			<td>{{row['reservation_status']}}</td>
+			<td><a style="color: orange;" href="rest_view_category?cat_id={{row['category_id']}}">View category</a></td>
+			<td><a style="color: orange;" href="rest_view_customer_details?customer_id={{row['customer_id']}}">View Customer Details</a></td>
+			<td><a style="color: orange;" href="rest_view_food_ordered?reservation_id={{row['reservation_id']}}">View Ordered Food</a></td>
+			<td><a style="color: orange;" href="rest_view_payment?res_id={{row['reservation_id']}}">View Payment</a></td>
+		</tr>
+		{% endfor %}
+	</table>
+</center>
+{% include "footer.html"%}

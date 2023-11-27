@@ -1,0 +1,35 @@
+{% include "admin_header.html" %}
+<center>
+	<form method="post">
+		
+
+		<h1>Tables</h1>
+
+		<table class="table" style="width: 500px">
+			<tr>
+				<th>Sl No</th>
+				<th>Restaurant Name</th>
+				<th>Category</th>
+				<th>Table Name</th>
+				<th>No of Seats</th>
+				<th>Table Availability</th>
+			</tr>
+
+			{% for row in data['table'] %}
+
+			<tr>
+				<td>{{loop.index}}</td>
+				<td>{{row['name']}}</td>
+				<td>{{row['category_name']}}</td>
+				<td>{{row['table_name']}}</td>
+				<td>{{row['number_of_seats']}}</td>
+				<td>{{row['table_availability']}}</td>
+				
+
+			</tr>
+			{% endfor %}
+		</table>
+		
+	</form>
+</center>
+{% include "footer.html" %}

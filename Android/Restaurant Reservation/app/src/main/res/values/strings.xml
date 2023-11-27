@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">GraphicalRestaurentReservation</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_login">Login</string>
+    <string name="title_activity_home">Home</string>
+    <string name="title_activity_register">Register</string>
+    <string name="title_activity_view_feedback">View_feedback</string>
+    <string name="title_activity_view_hotel_facilities">View_hotel_facilities</string>
+    <string name="title_activity_view_menu">View_menu</string>
+    <string name="title_activity_view_table_status">View_table_status</string>
+    <string name="title_activity_view_reserved_table">View_reserved_table</string>
+    <string name="title_activity_confirm_reservation_by_paying_advance">Confirm_reservation_by_paying_advance</string>
+    <string name="title_activity_view_menu_to_order_foods">View_menu_to_order_foods</string>
+    <string name="title_activity_place_an_order">Place_an_order</string>
+
+</resources>

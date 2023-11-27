@@ -1,0 +1,108 @@
+{% include "rest_header.html" %}
+<center>
+	<form method="post" enctype="multipart/form-data">
+		{% if data['updatess'] %}
+		<h1>Update Menu</h1>
+		<table class="table" style="width: 500px">
+			<tr>
+				<th>Item Name</th>
+				<td><input type="text" name="name" value="{{data['updatess'][0]['item_name']}}" pattern="[a-zA-Z]{0,30}" required></td>
+				
+			</tr>
+			<tr>
+				<th>Item Image</th>
+				<td><input type="file" name="image" value="{{data['updatess'][0]['item_image']}}" required></td>
+				
+			</tr>
+			<tr>
+				<th>Item Quantity</th>
+				<td><input type="text" name="qnty" value="{{data['updatess'][0]['item_quantity']}}" pattern="[0-9]{0,5}"></td>
+				
+			</tr>
+			<tr>
+				<th>Item Price</th>
+				<td><input type="text" name="price" value="{{data['updatess'][0]['item_price']}}" pattern="[0-9]{0,7}"></td>
+				
+			</tr>
+			<!-- <tr>
+				<th>Item Availability</th>
+				<td><input type="text" name="avail" value="{{data['updatess'][0]['item_availability']}}" required></td>
+				
+			</tr> -->
+			<tr>
+				
+				<td colspan="2" align="center"><input type="submit" name="submits" value="submit"></td>
+				
+			</tr>
+		</table class="table" style="width: 500px">
+		{% else %}
+		<h1>Add Menu</h1>
+		<table>
+			<tr>
+				<th>Item Name</th>
+				<td><input type="text" name="name"></td>
+				
+			</tr>
+			<tr>
+				<th>Item Image</th>
+				<td><input type="file" name="image"></td>
+				
+			</tr>
+			<tr>
+				<th>Item Quantity</th>
+				<td><input type="text" name="qnty"></td>
+				
+			</tr>
+			<tr>
+				<th>Item Price</th>
+				<td><input type="text" name="price"></td>
+				
+			</tr>
+			<!-- <tr>
+				<th>Item Availability</th>
+				<td><input type="text" name="avail"></td>
+				
+			</tr> -->
+			<tr>
+				
+				<td colspan="2" align="center"><input type="submit" name="submit" value="submit"></td>
+				
+			</tr>
+		</table>
+		{% endif %}
+		<h1>Menu Details</h1>
+
+		<table class="table" style="width: 500px">
+			<tr>
+				<th>Sl No</th>
+				<th>Item Name</th>
+				<th>Image</th>
+				<th>Quantity</th>
+				<th>Price</th>
+				<th>Availability</th>
+			</tr>
+			{% for row in data['menu'] %}
+			<tr>
+				<td>{{loop.index}}</td>
+				<td>{{row['item_name']}}</td>
+				<td><img src="/{{row['item_image']}}" height="70px" width="70px"></td>
+				<td>{{row['item_quantity']}}</td>
+				<td>{{row['item_price']}}</td>
+				<td>{{row['item_availability']}}</td>
+
+				<td><a style="color: orange;" href="?action=update&mid={{row['menu_id']}}">Update</a></td>
+				<td><a style="color: orange;" href="?action=delete&mid={{row['menu_id']}}">delete</a></td>
+				{% if row['item_availability']=='not available' %}
+				<td><a style="color: orange;" href="?action=avail&mid={{row['menu_id']}}">Available</a></td>
+				{% elif row['item_availability']=='available' %}
+				<td><a style="color: orange;" href="?action=notavail&mid={{row['menu_id']}}">Not Available</a></td>
+				{% endif %}
+
+
+			</tr>
+			{% endfor %}
+		</table>
+		
+	</form>
+</center>
+{% include "footer.html" %}

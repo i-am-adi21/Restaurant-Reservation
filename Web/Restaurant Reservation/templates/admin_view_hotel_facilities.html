@@ -1,0 +1,28 @@
+{% include "admin_header.html" %}
+<center>
+	<form method="post">
+	
+		<h1>Hotel Facilities</h1>
+
+		<table class="table" style="width: 500px">
+			<tr>
+				<th>Sl No</th>
+				<th>Restaurant Name</th>
+				<th>Facility Name</th>
+				<th>Facility Description</th>
+				
+			</tr>
+			{% for row in data['facility'] %}
+			<tr>
+				<td>{{loop.index}}</td>
+				<td>{{row['name']}}</td>
+				<td>{{row['facility_name']}}</td>
+				
+				<td>{{row['facility_description']}}</td>
+			</tr>
+			{% endfor %}
+		</table>
+		
+	</form>
+</center>
+{% include "footer.html" %}

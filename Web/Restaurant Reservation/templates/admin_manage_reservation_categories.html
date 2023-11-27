@@ -1,0 +1,72 @@
+{% include "admin_header.html" %}
+<center>
+	<form method="post" enctype="multipart/form-data">
+		{% if data['updatess'] %}
+		<h1>Update Categories</h1>
+		<table class="table" style="width: 500px">
+			<tr>
+				<th>category Name</th>
+				<td><input type="text" name="cname" value="{{data['updatess'][0]['category_name']}}"></td>
+				
+			</tr>
+			<tr>
+				<th>Category Description</th>
+				<td><input type="text" name="desc" value="{{data['updatess'][0]['category_description']}}"></td>
+				
+			</tr>
+			
+			<tr>
+				
+				<td colspan="2" align="center"><input type="submit" name="submits" value="submit"></td>
+				
+			</tr>
+		</table>
+
+		{% else %}
+
+		<h1>Add Reservation Categories</h1>
+		<table class="table" style="width: 500px">
+			<tr>
+				<th>category Name</th>
+				<td><input type="text" name="cname"></td>
+				
+			</tr>
+			<tr>
+				<th>Category Description</th>
+				<td><input type="text" name="desc"></td>
+				
+			</tr>
+			
+			<tr>
+				
+				<td colspan="2" align="center"><input type="submit" name="submit" value="submit"></td>
+				
+			</tr>
+		</table class="table" style="width: 500px">
+		{% endif %}
+		<h1>Reservation Categories</h1>
+
+		<table>
+			<tr>
+				<th>Sl No</th>
+				<th>Category Name</th>
+				<th>Category Description</th>
+				
+			</tr>
+			{% for row in data['cat'] %}
+			<tr>
+				<td>{{loop.index}}</td>
+				<td>{{row['category_name']}}</td>
+				
+				<td>{{row['category_description']}}</td>
+				<td><a style="color: orange;" href="?action=update&cid={{row['category_id']}}">Update</a></td>
+				<td><a style="color: orange;" href="?action=delete&cid={{row['category_id']}}">delete</a></td>
+
+
+			</tr>
+			{% endfor %}
+		</table>
+		
+	</form>
+</center>
+{% include "footer.html" %}

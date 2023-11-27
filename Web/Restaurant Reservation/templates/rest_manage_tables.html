@@ -1,0 +1,94 @@
+{% include "rest_header.html" %}
+<center>
+	<form method="post">
+		{% if data['updatess'] %}
+		<h1>Update Tables</h1>
+		<table class="table" style="width: 500px">
+			<tr>
+				<th>Category</th>
+				<td>
+					<select name="cat">
+						<option value="{{data['updatess'][0]['category_id']}}">{{data['updatess'][0]['category_name']}}</option>
+						{% for row in data['cat'] %}
+						<option value="{{row['category_id']}}">{{row['category_name']}}</option>
+						{% endfor %}
+					</select>
+				</td>
+			</tr>
+			<tr>
+			<th>Table Name</th>
+			<td><input type="text" name="table" value="{{data['updatess'][0]['table_name']}}"></td>
+			</tr>
+			<tr>
+				<th>No of Seats</th>
+				<td><input type="text" name="seats" value="{{data['updatess'][0]['number_of_seats']}}"></td>
+			</tr>
+		
+			<tr>
+				<td colspan="2" align="center"><input type="submit" name="submits" value="submit"></td>
+			</tr>
+		</table>
+		{% else %}
+		<h1>Manage Tables</h1>
+		<table class="table" style="width: 500px">
+			<tr>
+				<th>Category</th>
+				<td>
+					<select name="cat">
+						<option>Choose</option>
+						{% for row in data['cat'] %}
+						<option value="{{row['category_id']}}">{{row['category_name']}}</option>
+						{% endfor %}
+					</select>
+				</td>
+			</tr>
+			<tr>
+			<th>Table Name</th>
+			<td><input type="text" name="table"></td>
+			</tr>
+			<tr>
+				<th>No of Seats</th>
+				<td><input type="text" name="seats"></td>
+			</tr>
+			
+			<tr>
+				<td colspan="2" align="center"><input type="submit" name="submit" value="submit"></td>
+			</tr>
+		</table>
+		{% endif %}
+
+		<h1>Tables</h1>
+
+		<table class="table" style="width: 500px">
+			<tr>
+				<th>Sl No</th>
+				<th>Category</th>
+				<th>Table Name</th>
+				<th>No of Seats</th>
+				<th>Table Availability</th>
+			</tr>
+
+			{% for row in data['table'] %}
+
+			<tr>
+				<td>{{loop.index}}</td>
+				<td>{{row['category_name']}}</td>
+				<td>{{row['table_name']}}</td>
+				<td>{{row['number_of_seats']}}</td>
+				<td>{{row['table_availability']}}</td>
+				<td><a style="color: orange;" href="?action=update&tid={{row['table_id']}}">Update</a></td>
+				<td><a style="color: orange;" href="?action=delete&tid={{row['table_id']}}">Delete</a></td>
+				{% if row['table_availability']=='not available' %}
+				<td><a style="color: orange;" href="?action=avail&tid={{row['table_id']}}">Table available</a></td>
+				{% endif %}
+				{% if row['table_availability']=='available' %}
+				<td><a style="color: orange;" href="?action=notavail&tid={{row['table_id']}}">Table not Availabile</a></td>
+				{% endif %}
+
+			</tr>
+			{% endfor %}
+		</table>
+		
+	</form>
+</center>
+{% include "footer.html" %}

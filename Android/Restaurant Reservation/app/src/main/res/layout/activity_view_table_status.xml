@@ -1,0 +1,32 @@
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:background="@drawable/rest"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/btviewbookedtable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ff0066"
+            android:text="View Reserved Tables" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TABLE STATUS"
+            android:textColor="#fff"
+            android:layout_gravity="center"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <ListView
+            android:id="@+id/lvtable"
+            android:layout_width="match_parent"
+            android:layout_height="400dp" >
+        </ListView>
+
+    </LinearLayout>
+

@@ -1,0 +1,23 @@
+{% include "admin_header.html" %}
+<center>
+	<h1>Reservation Category</h1>
+	<table class="table" style="width: 500px">
+
+		<tr>
+			<th>Sl No</th>
+			<th>category Name</th>
+			<th>Category Description</th>
+			
+		</tr>
+		{% for row in data['cat'] %}
+
+		<tr>
+			<td>{{loop.index}}</td>
+			<td>{{row['category_name']}}</td>
+			<td>{{row['category_description']}}</td>
+			
+		</tr>
+		{% endfor %}
+	</table>
+</center>
+{% include "footer.html"%}

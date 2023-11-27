@@ -1,0 +1,150 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.graphicalrestaurentreservation"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+7-->D:\2021 Projects\SNGIST\Restorent Reservation\Restorent Reservation\Android\GraphicalRestaurentReservation\app\src\main\AndroidManifest.xml:7:5-9:41
+8        android:minSdkVersion="19"
+8-->D:\2021 Projects\SNGIST\Restorent Reservation\Restorent Reservation\Android\GraphicalRestaurentReservation\app\src\main\AndroidManifest.xml:8:9-35
+9        android:targetSdkVersion="30" />
+9-->D:\2021 Projects\SNGIST\Restorent Reservation\Restorent Reservation\Android\GraphicalRestaurentReservation\app\src\main\AndroidManifest.xml:9:9-38
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->D:\2021 Projects\SNGIST\Restorent Reservation\Restorent Reservation\Android\GraphicalRestaurentReservation\app\src\main\AndroidManifest.xml:11:5-67
+11-->D:\2021 Projects\SNGIST\Restorent Reservation\Restorent Reservation\Android\GraphicalRestaurentReservation\app\src\main\AndroidManifest.xml:11:22-64
+12    <uses-permission android:name="android.permission.CAMERA" />
+12-->D:\2021 Projects\SNGIST\Restorent Reservation\Restorent Reservation\Android\GraphicalRestaurentReservation\app\src\main\AndroidManifest.xml:12:5-65
+12-->D:\2021 Projects\SNGIST\Restorent Reservation\Restorent Reservation\Android\GraphicalRestaurentReservation\app\src\main\AndroidManifest.xml:12:22-62
+13    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+13-->D:\2021 Projects\SNGIST\Restorent Reservation\Restorent Reservation\Android\GraphicalRestaurentReservation\app\src\main\AndroidManifest.xml:13:5-79
+13-->D:\2021 Projects\SNGIST\Restorent Reservation\Restorent Reservation\Android\GraphicalRestaurentReservation\app\src\main\AndroidManifest.xml:13:22-76
+14    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+14-->D:\2021 Projects\SNGIST\Restorent Reservation\Restorent Reservation\Android\GraphicalRestaurentReservation\app\src\main\AndroidManifest.xml:14:5-81
+14-->D:\2021 Projects\SNGIST\Restorent Reservation\Restorent Reservation\Android\GraphicalRestaurentReservation\app\src\main\AndroidManifest.xml:14:22-78
+15    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+15-->D:\2021 Projects\SNGIST\Restorent Reservation\Restorent Reservation\Android\GraphicalRestaurentReservation\app\src\main\AndroidManifest.xml:15:5-75
+15-->D:\2021 Projects\SNGIST\Restorent Reservation\Restorent Reservation\Android\GraphicalRestaurentReservation\app\src\main\AndroidManifest.xml:15:22-72
+16    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+16-->D:\2021 Projects\SNGIST\Restorent Reservation\Restorent Reservation\Android\GraphicalRestaurentReservation\app\src\main\AndroidManifest.xml:16:5-81
+16-->D:\2021 Projects\SNGIST\Restorent Reservation\Restorent Reservation\Android\GraphicalRestaurentReservation\app\src\main\AndroidManifest.xml:16:22-78
+17    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+17-->D:\2021 Projects\SNGIST\Restorent Reservation\Restorent Reservation\Android\GraphicalRestaurentReservation\app\src\main\AndroidManifest.xml:17:5-80
+17-->D:\2021 Projects\SNGIST\Restorent Reservation\Restorent Reservation\Android\GraphicalRestaurentReservation\app\src\main\AndroidManifest.xml:17:22-77
+18
+19    <application
+19-->D:\2021 Projects\SNGIST\Restorent Reservation\Restorent Reservation\Android\GraphicalRestaurentReservation\app\src\main\AndroidManifest.xml:19:5-72:19
+20        android:allowBackup="true"
+20-->D:\2021 Projects\SNGIST\Restorent Reservation\Restorent Reservation\Android\GraphicalRestaurentReservation\app\src\main\AndroidManifest.xml:20:9-35
+21        android:appComponentFactory="android.support.v4.app.CoreComponentFactory"
+21-->[com.android.support:support-compat:28.0.0] C:\Users\Lenovo\.gradle\caches\transforms-2\files-2.1\06f6df44c76c4a181cad1895980d5a87\support-compat-28.0.0\AndroidManifest.xml:22:18-91
+22        android:debuggable="true"
+23        android:icon="@drawable/rest5"
+23-->D:\2021 Projects\SNGIST\Restorent Reservation\Restorent Reservation\Android\GraphicalRestaurentReservation\app\src\main\AndroidManifest.xml:21:9-39
+24        android:label="@string/app_name"
+24-->D:\2021 Projects\SNGIST\Restorent Reservation\Restorent Reservation\Android\GraphicalRestaurentReservation\app\src\main\AndroidManifest.xml:22:9-41
+25        android:requestLegacyExternalStorage="true"
+25-->D:\2021 Projects\SNGIST\Restorent Reservation\Restorent Reservation\Android\GraphicalRestaurentReservation\app\src\main\AndroidManifest.xml:24:9-52
+26        android:theme="@style/AppTheme"
+26-->D:\2021 Projects\SNGIST\Restorent Reservation\Restorent Reservation\Android\GraphicalRestaurentReservation\app\src\main\AndroidManifest.xml:25:9-40
+27        android:usesCleartextTraffic="true" >
+27-->D:\2021 Projects\SNGIST\Restorent Reservation\Restorent Reservation\Android\GraphicalRestaurentReservation\app\src\main\AndroidManifest.xml:23:9-44
+28        <activity android:name="com.example.graphicalrestaurentreservation.ViewBookings" />
+28-->D:\2021 Projects\SNGIST\Restorent Reservation\Restorent Reservation\Android\GraphicalRestaurentReservation\app\src\main\AndroidManifest.xml:26:9-59
+28-->D:\2021 Projects\SNGIST\Restorent Reservation\Restorent Reservation\Android\GraphicalRestaurentReservation\app\src\main\AndroidManifest.xml:26:19-47
+29        <activity android:name="com.example.graphicalrestaurentreservation.RateRestaurant" />
+29-->D:\2021 Projects\SNGIST\Restorent Reservation\Restorent Reservation\Android\GraphicalRestaurentReservation\app\src\main\AndroidManifest.xml:27:9-52
+29-->D:\2021 Projects\SNGIST\Restorent Reservation\Restorent Reservation\Android\GraphicalRestaurentReservation\app\src\main\AndroidManifest.xml:27:19-49
+30        <activity android:name="com.example.graphicalrestaurentreservation.AndroidBarcodeQrExample" />
+30-->D:\2021 Projects\SNGIST\Restorent Reservation\Restorent Reservation\Android\GraphicalRestaurentReservation\app\src\main\AndroidManifest.xml:28:9-61
+30-->D:\2021 Projects\SNGIST\Restorent Reservation\Restorent Reservation\Android\GraphicalRestaurentReservation\app\src\main\AndroidManifest.xml:28:19-58
+31        <activity android:name="com.example.graphicalrestaurentreservation.ViewHotels" />
+31-->D:\2021 Projects\SNGIST\Restorent Reservation\Restorent Reservation\Android\GraphicalRestaurentReservation\app\src\main\AndroidManifest.xml:29:9-48
+31-->D:\2021 Projects\SNGIST\Restorent Reservation\Restorent Reservation\Android\GraphicalRestaurentReservation\app\src\main\AndroidManifest.xml:29:19-45
+32        <activity
+32-->D:\2021 Projects\SNGIST\Restorent Reservation\Restorent Reservation\Android\GraphicalRestaurentReservation\app\src\main\AndroidManifest.xml:30:9-38:20
+33            android:name="com.example.graphicalrestaurentreservation.IPsettings"
+33-->D:\2021 Projects\SNGIST\Restorent Reservation\Restorent Reservation\Android\GraphicalRestaurentReservation\app\src\main\AndroidManifest.xml:31:13-39
+34            android:label="@string/app_name" >
+34-->D:\2021 Projects\SNGIST\Restorent Reservation\Restorent Reservation\Android\GraphicalRestaurentReservation\app\src\main\AndroidManifest.xml:32:13-45
+35            <intent-filter>
+35-->D:\2021 Projects\SNGIST\Restorent Reservation\Restorent Reservation\Android\GraphicalRestaurentReservation\app\src\main\AndroidManifest.xml:33:13-37:29
+36                <action android:name="android.intent.action.MAIN" />
+36-->D:\2021 Projects\SNGIST\Restorent Reservation\Restorent Reservation\Android\GraphicalRestaurentReservation\app\src\main\AndroidManifest.xml:34:17-69
+36-->D:\2021 Projects\SNGIST\Restorent Reservation\Restorent Reservation\Android\GraphicalRestaurentReservation\app\src\main\AndroidManifest.xml:34:25-66
+37
+38                <category android:name="android.intent.category.LAUNCHER" />
+38-->D:\2021 Projects\SNGIST\Restorent Reservation\Restorent Reservation\Android\GraphicalRestaurentReservation\app\src\main\AndroidManifest.xml:36:17-77
+38-->D:\2021 Projects\SNGIST\Restorent Reservation\Restorent Reservation\Android\GraphicalRestaurentReservation\app\src\main\AndroidManifest.xml:36:27-74
+39            </intent-filter>
+40        </activity>
+41        <activity
+41-->D:\2021 Projects\SNGIST\Restorent Reservation\Restorent Reservation\Android\GraphicalRestaurentReservation\app\src\main\AndroidManifest.xml:39:9-41:60
+42            android:name="com.example.graphicalrestaurentreservation.Login"
+42-->D:\2021 Projects\SNGIST\Restorent Reservation\Restorent Reservation\Android\GraphicalRestaurentReservation\app\src\main\AndroidManifest.xml:40:13-34
+43            android:label="@string/title_activity_login" />
+43-->D:\2021 Projects\SNGIST\Restorent Reservation\Restorent Reservation\Android\GraphicalRestaurentReservation\app\src\main\AndroidManifest.xml:41:13-57
+44        <activity
+44-->D:\2021 Projects\SNGIST\Restorent Reservation\Restorent Reservation\Android\GraphicalRestaurentReservation\app\src\main\AndroidManifest.xml:42:9-44:59
+45            android:name="com.example.graphicalrestaurentreservation.Home"
+45-->D:\2021 Projects\SNGIST\Restorent Reservation\Restorent Reservation\Android\GraphicalRestaurentReservation\app\src\main\AndroidManifest.xml:43:13-33
+46            android:label="@string/title_activity_home" />
+46-->D:\2021 Projects\SNGIST\Restorent Reservation\Restorent Reservation\Android\GraphicalRestaurentReservation\app\src\main\AndroidManifest.xml:44:13-56
+47        <activity
+47-->D:\2021 Projects\SNGIST\Restorent Reservation\Restorent Reservation\Android\GraphicalRestaurentReservation\app\src\main\AndroidManifest.xml:45:9-47:63
+48            android:name="com.example.graphicalrestaurentreservation.Register"
+48-->D:\2021 Projects\SNGIST\Restorent Reservation\Restorent Reservation\Android\GraphicalRestaurentReservation\app\src\main\AndroidManifest.xml:46:13-37
+49            android:label="@string/title_activity_register" />
+49-->D:\2021 Projects\SNGIST\Restorent Reservation\Restorent Reservation\Android\GraphicalRestaurentReservation\app\src\main\AndroidManifest.xml:47:13-60
+50        <activity
+50-->D:\2021 Projects\SNGIST\Restorent Reservation\Restorent Reservation\Android\GraphicalRestaurentReservation\app\src\main\AndroidManifest.xml:48:9-50:68
+51            android:name="com.example.graphicalrestaurentreservation.View_feedback"
+51-->D:\2021 Projects\SNGIST\Restorent Reservation\Restorent Reservation\Android\GraphicalRestaurentReservation\app\src\main\AndroidManifest.xml:49:13-42
+52            android:label="@string/title_activity_view_feedback" />
+52-->D:\2021 Projects\SNGIST\Restorent Reservation\Restorent Reservation\Android\GraphicalRestaurentReservation\app\src\main\AndroidManifest.xml:50:13-65
+53        <activity
+53-->D:\2021 Projects\SNGIST\Restorent Reservation\Restorent Reservation\Android\GraphicalRestaurentReservation\app\src\main\AndroidManifest.xml:51:9-53:76
+54            android:name="com.example.graphicalrestaurentreservation.View_hotel_facilities"
+54-->D:\2021 Projects\SNGIST\Restorent Reservation\Restorent Reservation\Android\GraphicalRestaurentReservation\app\src\main\AndroidManifest.xml:52:13-50
+55            android:label="@string/title_activity_view_hotel_facilities" />
+55-->D:\2021 Projects\SNGIST\Restorent Reservation\Restorent Reservation\Android\GraphicalRestaurentReservation\app\src\main\AndroidManifest.xml:53:13-73
+56        <activity
+56-->D:\2021 Projects\SNGIST\Restorent Reservation\Restorent Reservation\Android\GraphicalRestaurentReservation\app\src\main\AndroidManifest.xml:54:9-56:64
+57            android:name="com.example.graphicalrestaurentreservation.View_menu"
+57-->D:\2021 Projects\SNGIST\Restorent Reservation\Restorent Reservation\Android\GraphicalRestaurentReservation\app\src\main\AndroidManifest.xml:55:13-38
+58            android:label="@string/title_activity_view_menu" />
+58-->D:\2021 Projects\SNGIST\Restorent Reservation\Restorent Reservation\Android\GraphicalRestaurentReservation\app\src\main\AndroidManifest.xml:56:13-61
+59        <activity
+59-->D:\2021 Projects\SNGIST\Restorent Reservation\Restorent Reservation\Android\GraphicalRestaurentReservation\app\src\main\AndroidManifest.xml:57:9-59:72
+60            android:name="com.example.graphicalrestaurentreservation.View_table_status"
+60-->D:\2021 Projects\SNGIST\Restorent Reservation\Restorent Reservation\Android\GraphicalRestaurentReservation\app\src\main\AndroidManifest.xml:58:13-46
+61            android:label="@string/title_activity_view_table_status" />
+61-->D:\2021 Projects\SNGIST\Restorent Reservation\Restorent Reservation\Android\GraphicalRestaurentReservation\app\src\main\AndroidManifest.xml:59:13-69
+62        <activity
+62-->D:\2021 Projects\SNGIST\Restorent Reservation\Restorent Reservation\Android\GraphicalRestaurentReservation\app\src\main\AndroidManifest.xml:60:9-62:74
+63            android:name="com.example.graphicalrestaurentreservation.View_reserved_table"
+63-->D:\2021 Projects\SNGIST\Restorent Reservation\Restorent Reservation\Android\GraphicalRestaurentReservation\app\src\main\AndroidManifest.xml:61:13-48
+64            android:label="@string/title_activity_view_reserved_table" />
+64-->D:\2021 Projects\SNGIST\Restorent Reservation\Restorent Reservation\Android\GraphicalRestaurentReservation\app\src\main\AndroidManifest.xml:62:13-71
+65        <activity
+65-->D:\2021 Projects\SNGIST\Restorent Reservation\Restorent Reservation\Android\GraphicalRestaurentReservation\app\src\main\AndroidManifest.xml:63:9-65:92
+66            android:name="com.example.graphicalrestaurentreservation.Confirm_reservation_by_paying_advance"
+66-->D:\2021 Projects\SNGIST\Restorent Reservation\Restorent Reservation\Android\GraphicalRestaurentReservation\app\src\main\AndroidManifest.xml:64:13-66
+67            android:label="@string/title_activity_confirm_reservation_by_paying_advance" />
+67-->D:\2021 Projects\SNGIST\Restorent Reservation\Restorent Reservation\Android\GraphicalRestaurentReservation\app\src\main\AndroidManifest.xml:65:13-89
+68        <activity
+68-->D:\2021 Projects\SNGIST\Restorent Reservation\Restorent Reservation\Android\GraphicalRestaurentReservation\app\src\main\AndroidManifest.xml:66:9-68:79
+69            android:name="com.example.graphicalrestaurentreservation.View_menu_to_order_foods"
+69-->D:\2021 Projects\SNGIST\Restorent Reservation\Restorent Reservation\Android\GraphicalRestaurentReservation\app\src\main\AndroidManifest.xml:67:13-53
+70            android:label="@string/title_activity_view_menu_to_order_foods" />
+70-->D:\2021 Projects\SNGIST\Restorent Reservation\Restorent Reservation\Android\GraphicalRestaurentReservation\app\src\main\AndroidManifest.xml:68:13-76
+71        <activity
+71-->D:\2021 Projects\SNGIST\Restorent Reservation\Restorent Reservation\Android\GraphicalRestaurentReservation\app\src\main\AndroidManifest.xml:69:9-71:69
+72            android:name="com.example.graphicalrestaurentreservation.Place_an_order"
+72-->D:\2021 Projects\SNGIST\Restorent Reservation\Restorent Reservation\Android\GraphicalRestaurentReservation\app\src\main\AndroidManifest.xml:70:13-43
+73            android:label="@string/title_activity_place_an_order" />
+73-->D:\2021 Projects\SNGIST\Restorent Reservation\Restorent Reservation\Android\GraphicalRestaurentReservation\app\src\main\AndroidManifest.xml:71:13-66
+74    </application>
+75
+76</manifest>
